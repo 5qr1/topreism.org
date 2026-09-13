@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>hack for serial mice on xenocara
+</title>
+<style>
+body { background: #fefcea; color: rgb(10, 10, 30); width: 800px; margin: 0 auto; max-width: 90bf; }
+nav { display: flex; justify-content: space-evenly; width: 400px; margin: 0 auto; }
+footer { font-size: 12px; } 
+img { display: block; max-width: 700px; margin: 30px auto; }
+a { font-weight: bold; color: #3a4395; }
+a:hover { background-color: #3a4395; color: white; text-decoration: none; }
+</style>
+</head>
+<br><hr><hr><br>
+<header>
+<nav>
+<a href="a">writing</a>
+<a href="a">equipment</a>
+<a href="a">projects</a>
+<a href="https://github.com/5qr1/">github</a>
+<a href="mailto:5qr1@tutanota.com">email</a>
+</nav>
+</header>
+<body>
+<br><hr><hr><br>
+<h1>hack for serial mice on xenocara</h1>
+<p>disclaimer: im not an expert :- ( please email me if anything here is wrong and/or if theres a better/non hacky way to do this</p>
+
+<p>xenocara limits itself to only be able to access certain files. <code>/dev/cuaU0</code> is not one of those files, so it&#39;s impossible to use a serial mouse mounted at /dev/cuaU0, right? wrong! delete <code>/dev/wsmouse</code> and symlink <code>/dev/cuaU0</code> to it, and point your xorg.conf there. its disgusting but works :- )</p>
+
+<pre><code>Section &quot;ServerFlags&quot;
+	Option &quot;AutoAddDevices&quot; &quot;Off&quot;
+EndSection
+
+Section &quot;InputDevice&quot;
+	Identifier &quot;SerialMouse&quot;
+	Driver &quot;mouse&quot;
+	Option &quot;Protocol&quot; &quot;Microsoft&quot;
+	Option &quot;Baudrate&quot; &quot;1200&quot;
+	Option &quot;Device&quot; &quot;/dev/wsmouse&quot;
+EndSection
+</code></pre>
+
+
+</body>
+<footer>
+<p>powered by <a href="https://github.com/5qr1/bf">bf</a> &amp; <a href="https://github.com/5qr1/muth">muth</a>, built at Sun Sep 13 23:37:23 BST 2026
+</p>
+</footer>
+</html>
