@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>%[head -n 1 %1]</title>
+<link rel="stylesheet" href="../css/wiki/main.css">
+<link rel="stylesheet" href="../css/%[echo -n "%1" | sed 's/\.md/.css/g']">
+</head>
+
+<body>
+
+<header>
+<a href="contrib.html">contributing</a>
+<a href="index.html">about</a>
+<a href="https://github.com/5qr1/topreism.org">github</a>
+</header>
+<hr>
+
+%[muth %1]
+
+<footer>
+<p>last edited %[date]</p>
+</footer>
+
+</body>
+</html>
