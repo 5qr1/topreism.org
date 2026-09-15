@@ -2,8 +2,8 @@
 .PHONY: all push test
 .SUFFIXES: .md .html
 
-TMPL = wiki.tmpl
-PAGES != find wiki -name '*.md' | sed 's/\.md/.html/g'
+TMPL = main.tmpl
+PAGES != find wk -name '*.md' | sed 's/\.md/.html/g'
 
 .md.html: $(TMPL)
 	bf $< < $(TMPL) > $@
@@ -13,6 +13,5 @@ push: all
 	git add .
 	git commit $(CF)
 	git push $(PF)
-test: all
-	# i know...
+test: all 
 	python3 -m http.server 1337

@@ -7,4 +7,4 @@ Please be aware that, as of writing this, the wiki is extremely incomplete, and 
 
 Wiki pages are styled similarly to UNIX manpages for ease of reading and writing them. :- )
 
-This wiki assumes basic knowledge of keyboards and terms used to describe them. For the uninitiated, you can read about the <https://en.wikipedia.org/wiki/Topre|topre> keyboard switch <topre.html|here>, and you can learn how to contribute <contributing.html|here>.
+This wiki assumes basic knowledge of keyboards and terms used to describe them. For the uninitiated, you can read about the <https://en.wikipedia.org/wiki/Topre|topre> keyboard switch <topre.html|here>, and you can learn how to contribute <contrib.html|here>.

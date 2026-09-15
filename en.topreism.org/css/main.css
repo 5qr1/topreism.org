@@ -1,0 +1,49 @@
+body {
+	max-width: 600px;
+}
+
+header {
+	overflow: hidden;
+}
+
+h1, h2 {
+	text-align: right;
+}
+
+h1 {
+	margin-top: -5px;
+}
+
+blockquote {
+	margin-top: -12px;
+}
+
+a {
+	text-decoration: none;
+	color: #3c459a;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header img {
+	float: left;
+	max-width: 280px;
+}
+
+p img {
+	display: block;
+	max-width: 600px;
+	margin: 30px auto;
+}
+
+footer p {
+	font-size: 60%;
+}
+
+header a {
+	display: block;
+	text-align: right;
+}
+
