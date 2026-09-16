@@ -3,7 +3,7 @@
 .SUFFIXES: .md .html
 
 TMPL = main.tmpl
-PAGES != find wk -name '*.md' | sed 's/\.md/.html/g'
+PAGES != find w -name '*.md' | sed 's/\.md/.html/g'
 
 .md.html: $(TMPL)
 	bf $< < $(TMPL) > $@
